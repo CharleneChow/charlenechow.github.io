@@ -36,6 +36,7 @@ nav li {
   display: inline;
   margin-right: 20px;
   position: relative; /* 必须添加，才能让二级菜单正确定位 */
+  z-index: 10; /* 确保导航项位于最上层 */
 }
 
 nav a {
