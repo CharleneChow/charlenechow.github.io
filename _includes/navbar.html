@@ -1,14 +1,31 @@
 <!-- _includes/navbar.html -->
 <nav style="background-color: #333; padding: 10px 0;">
   <ul style="list-style: none; text-align: center; margin: 0; padding: 0;">
+    <!-- 一级菜单 -->
     <li style="display: inline; margin-right: 20px;">
       <a href="{{ '/' | absolute_url }}" style="color: white; text-decoration: none;">首页</a>
     </li>
     <li style="display: inline; margin-right: 20px;">
-      <a href="{{ '/about' | absolute_url }}" style="color: white; text-decoration: none;">项目</a>
+      <a href="{{ '/about' | absolute_url }}" style="color: white; text-decoration: none;">关于我们</a>
+    </li>
+    <!-- 一级菜单 - 博客（带二级菜单） -->
+    <li style="display: inline; margin-right: 20px; position: relative;">
+      <a href="{{ '/blog' | absolute_url }}" style="color: white; text-decoration: none;">博客</a>
+      <!-- 二级菜单 -->
+      <ul style="list-style: none; position: absolute; left: 0; top: 100%; background-color: #444; padding: 0; margin: 0; display: none;">
+        <li style="border-bottom: 1px solid #555;">
+          <a href="{{ '/blog/category1' | absolute_url }}" style="color: white; text-decoration: none; padding: 10px; display: block;">分类 1</a>
+        </li>
+        <li style="border-bottom: 1px solid #555;">
+          <a href="{{ '/blog/category2' | absolute_url }}" style="color: white; text-decoration: none; padding: 10px; display: block;">分类 2</a>
+        </li>
+        <li>
+          <a href="{{ '/blog/category3' | absolute_url }}" style="color: white; text-decoration: none; padding: 10px; display: block;">分类 3</a>
+        </li>
+      </ul>
     </li>
     <li style="display: inline; margin-right: 20px;">
-      <a href="{{ '/blog' | absolute_url }}" style="color: white; text-decoration: none;">博客</a>
+      <a href="{{ '/contact' | absolute_url }}" style="color: white; text-decoration: none;">联系我们</a>
     </li>
   </ul>
 </nav>
