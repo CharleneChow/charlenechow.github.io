@@ -36,6 +36,7 @@ nav ul {
 nav li {
   display: inline;
   margin-right: 20px;
+  position: relative; /* 必须添加，才能让二级菜单正确定位 */
 }
 
 nav a {
@@ -47,3 +48,33 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* 二级菜单样式 */
+nav li ul {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+  display: none; /* 默认隐藏二级菜单 */
+}
+
+nav li:hover ul {
+  display: block; /* 当鼠标悬停时显示二级菜单 */
+}
+
+nav li ul li {
+  border-bottom: 1px solid #555;
+}
+
+nav li ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+nav li ul li a:hover {
+  background-color: #555; /* 悬停时改变背景色 */
+}
